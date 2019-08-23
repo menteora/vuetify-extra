@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-layout align-center justify-center>
-      <v-flex xs12 sm8 md6 lg4>
+      <v-flex xs12 sm8 md6 lg5 xl4>
         <v-card class="card--flex-toolbar">
           <v-app-bar flat>
             <v-toolbar-title class="display-1 text-uppercase">
