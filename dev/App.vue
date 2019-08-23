@@ -15,15 +15,15 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   data: () => ({
-    jsonEmitted: ""
+    jsonEmitted: ''
   }),
   methods: {
-    getLoginData(values) {
-      console.log(values);
-      this.jsonEmitted = values;
+    getLoginData (values) {
+      console.log(values)
+      this.jsonEmitted = values
     }
   }
-};
+}
 </script>
