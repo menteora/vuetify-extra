@@ -9,15 +9,14 @@ function install (Vue) {
     Vue.component(componentName, components[componentName])
   })
 
-  //Register Global event to show AppMessage, related to AppSnackbar
-  //https://medium.com/@panzelva/writing-modals-for-vue-js-callable-from-anywhere-6994d180451
+  // Register Global event to show AppMessage, related to AppSnackbar
+  // https://medium.com/@panzelva/writing-modals-for-vue-js-callable-from-anywhere-6994d180451
   this.EventBus = new Vue()
   Vue.prototype.$appMessage = {
     show (params) {
       plugin.EventBus.$emit('AppMessageShow', params)
     }
   }
-
 }
 
 // Create module definition for Vue.use()
