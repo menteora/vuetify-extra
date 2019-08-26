@@ -15,16 +15,7 @@ export default {
       snackbar: false,
       message: ''
     }
-  }, /*
-  computed: {
-    message: {
-      // getter
-      get: function() {
-        this.snackbar = true;
-        return this.getAppMessage();
-      }
-    }
-  }, */
+  },
   methods: {
     show (message) {
       this.snackbar = true
@@ -32,23 +23,10 @@ export default {
     }
   },
   beforeMount () {
-    // here we need to listen for emited events
-    // we declared those events inside our plugin
-    Plugin.EventBus.$on('appMessageShow', params => {
+    Plugin.EventBus.$on('AppMessageShow', params => {
       this.show(params)
     })
-  } /*,
-  watch: {
-      appMessage: function (val){
-          console.log('changed')
-      }
-      },
-  watch: {
-    $appMessage: function (val) {
-      this.snackbar = true
-      this.message = this.$appMessage
-    }
-  } */
+  }
 }
 </script>
 
