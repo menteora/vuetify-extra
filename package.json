@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve ./dev/main.js",
     "build": "vue-cli-service build --target lib --name menteora src/plugin.js",
     "build:local": "vue-cli-service build --target lib --name menteora src/plugin.js && npm pack",
-    "lint": "vue-cli-service lint && vue-cli-service lint dev"
+    "lint": "vue-cli-service lint --fix && vue-cli-service lint dev --fix"
   },
   "files": [
     "dist"

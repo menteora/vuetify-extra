@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-content>
+      <app-bar />
       <login-form @login="getLoginData" />
       <v-container>
         <v-row align="center" justify="center" class="grey lighten-5">

@@ -1,3 +1,4 @@
 /* eslint-disable import/prefer-default-export */
 import LoginForm from './LoginForm.vue'
-export { LoginForm }
+import AppBar from './AppBar.vue'
+export { LoginForm, AppBar }
