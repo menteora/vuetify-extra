@@ -10,7 +10,16 @@
           </v-card>
         </v-row>
       </v-container>
+      <v-container>
+        <v-row align="center" justify="center" class="grey lighten-5">
+          <v-card class="ma-3 pa-6" outlined tile>
+            <v-card-title>Test App Message Snackbar</v-card-title>
+            <v-btn @click="$appMessage.show('Hello Friends')">Popup Message</v-btn>
+          </v-card>
+        </v-row>
+      </v-container>
     </v-content>
+    <app-snackbar />
   </v-app>
 </template>
 

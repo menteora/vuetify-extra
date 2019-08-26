@@ -46,7 +46,7 @@ export default {
     }
   },
   methods: {
-    routerProps: function (value) {
+    routerProps (value) {
       let prop = typeof this.$route === 'undefined' ? 'href' : 'to'
       return { [prop]: value }
     }
