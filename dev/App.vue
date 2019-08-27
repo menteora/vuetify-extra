@@ -4,7 +4,7 @@
       <app-bar :menu-items="menuItems" />
       <v-container>
         <v-card outlined tile>
-          <v-card-title>Test App Bar</v-card-title>
+          <v-card-title class="font-weight-light">Test App Bar</v-card-title>
           <v-card-text>
             <v-checkbox
               v-model="menuItems"
@@ -30,9 +30,10 @@
       </v-container>
       <v-container>
         <v-card outlined tile>
-          <v-card-title>Test App Message Snackbar</v-card-title>
+          <v-card-title class="font-weight-light">Test App Message Snackbar</v-card-title>
           <v-card-action>
-            <v-btn text @click="$appMessage.show('Hello Friends')">Popup Message</v-btn>
+            <v-text-field v-model="textMessage" class="mt-3 pa-6" outlined></v-text-field>
+            <v-btn text @click="$appMessage.show(textMessage)">Popup Message</v-btn>
           </v-card-action>
         </v-card>
       </v-container>
@@ -43,16 +44,16 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   data: () => ({
-    jsonEmitted: "",
-    menuItems: []
+    jsonEmitted: '',
+    menuItems: [],
+    textMessage: 'Hello World!'
   }),
   methods: {
-    getLoginData(values) {
-      console.log(values);
-      this.jsonEmitted = values;
+    getLoginData (values) {
+      this.jsonEmitted = values
     }
   }
-};
+}
 </script>
