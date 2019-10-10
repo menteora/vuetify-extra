@@ -1,7 +1,6 @@
 {
   "name": "@menteora/vuetify-extra",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve ./dev/main.js",
     "build": "vue-cli-service build --target lib --name menteora src/plugin.js",

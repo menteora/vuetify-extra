@@ -31,10 +31,10 @@
       <v-container>
         <v-card outlined tile>
           <v-card-title class="font-weight-light">Test App Message Snackbar</v-card-title>
-          <v-card-action>
+          <v-card-actions>
             <v-text-field v-model="textMessage" class="mt-3 pa-6" outlined></v-text-field>
             <v-btn text @click="$appMessage.show(textMessage)">Popup Message</v-btn>
-          </v-card-action>
+          </v-card-actions>
         </v-card>
       </v-container>
     </v-content>
