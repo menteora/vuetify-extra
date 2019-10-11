@@ -46,16 +46,16 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   data: () => ({
-    jsonEmitted: "",
+    jsonEmitted: '',
     menuItems: [],
-    textMessage: "Hello World!"
+    textMessage: 'Hello World!'
   }),
   methods: {
-    getLoginData(values) {
-      this.jsonEmitted = values;
+    getLoginData (values) {
+      this.jsonEmitted = values
     }
   }
-};
+}
 </script>
