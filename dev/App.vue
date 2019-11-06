@@ -18,15 +18,11 @@
             ></v-checkbox>
           </v-card-text>
         </v-card>
-        <v-card class="mt-3 pa-6" outlined tile>
-          <tree-view :data="menuItems"></tree-view>
-        </v-card>
+        <json-tree v-if="menuItems" :data="menuItems"></json-tree>
       </v-container>
       <login-form @login="getLoginData" />
       <v-container>
-        <v-card class="mt-3 pa-6" outlined tile>
-          <tree-view :data="jsonEmitted"></tree-view>
-        </v-card>
+      <json-tree v-if="jsonEmitted" :data="jsonEmitted"></json-tree>
       </v-container>
       <v-container>
         <v-card outlined tile>
@@ -46,6 +42,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'App',
   data: () => ({
