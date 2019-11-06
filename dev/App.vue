@@ -1,24 +1,24 @@
 <template>
   <v-app>
     <v-content>
-      <app-bar :menu-items="menuItems" />
+      <app-bar :menu-items="mItems" />
       <v-container>
         <v-card outlined tile>
           <v-card-title class="font-weight-light">Test App Bar</v-card-title>
           <v-card-text>
             <v-checkbox
-              v-model="menuItems"
+              v-model="mItems"
               label="Home"
-              :value="{title: 'Home',icon: 'mdi-home',to: '/'}"
+              :value="menuItems[0]"
             ></v-checkbox>
             <v-checkbox
-              v-model="menuItems"
+              v-model="mItems"
               label="Fake"
-              :value="{title: 'Fake',icon: 'mdi-bug',to: '/fake-url'}"
+              :value="menuItems[1]"
             ></v-checkbox>
           </v-card-text>
         </v-card>
-        <json-tree v-if="menuItems" :data="menuItems"></json-tree>
+        <json-tree v-if="mItems" :data="mItems"></json-tree>
       </v-container>
       <login-form @login="getLoginData" />
       <v-container>
@@ -46,9 +46,13 @@
 export default {
   name: 'App',
   data: () => ({
-    jsonEmitted: '',
-    menuItems: [],
-    textMessage: 'Hello World!'
+    jsonEmitted: null,
+    mItems: [],
+    textMessage: 'Hello World!',
+    menuItems: [
+      { title: 'Home', icon: 'mdi-home', to: '/' },
+      { title: 'Fake', icon: 'mdi-bug', to: '/fake-url' }
+    ]
   }),
   methods: {
     getLoginData (values) {
