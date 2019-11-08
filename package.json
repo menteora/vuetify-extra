@@ -1,6 +1,6 @@
 {
   "name": "@menteora/vuetify-extra",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "scripts": {
     "serve": "vue-cli-service serve ./dev/main.js",
     "build": "vue-cli-service build --target lib --name menteora src/plugin.js",
@@ -11,6 +11,10 @@
     "dist"
   ],
   "main": "./dist/menteora.common.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/menteora/vuetify-extra"
+  },
   "dependencies": {},
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.1",
