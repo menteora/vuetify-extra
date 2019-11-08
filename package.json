@@ -3,9 +3,11 @@
   "version": "0.2.2",
   "scripts": {
     "serve": "vue-cli-service serve ./dev/main.js",
+    "build:demo": "vue-cli-service build --dest demo ./dev/main.js",
     "build": "vue-cli-service build --target lib --name menteora src/plugin.js",
     "build:local": "vue-cli-service build --target lib --name menteora src/plugin.js && npm pack",
-    "lint": "vue-cli-service lint --fix && vue-cli-service lint dev --fix"
+    "lint": "vue-cli-service lint --fix && vue-cli-service lint dev --fix",
+    "deploy:demo": "vue-cli-service build --dest demo ./dev/main.js && ./deploy.demo.sh"
   },
   "files": [
     "dist"
