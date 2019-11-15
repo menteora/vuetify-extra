@@ -1,4 +1,8 @@
 # vuetify-extra
+Vue library with common used components based on Vuetify.
+
+Demo here: https://menteora.github.io/vuetify-extra/
+
 
 ## Project setup
 ```
@@ -13,11 +17,6 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
-```
-
-### Run your tests
-```
-npm run test
 ```
 
 ### Lints and fixes files

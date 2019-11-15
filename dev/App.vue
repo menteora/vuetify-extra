@@ -26,7 +26,28 @@
         </v-card>
       </v-container>
       <app-snackbar />
-      <card-container title="Title of a fillable card">
+      <card-page title-outside title="Title of a card page">
+        <v-card-text>Card with title outside card</v-card-text>
+      </card-page>
+      <card-page title="Title of a card page">
+        <v-card-text>Card with title inside card</v-card-text>
+      </card-page>
+      <card-page title-outside>
+        <v-card-text>Card without title</v-card-text>
+      </card-page>
+      <card-page title-outside>
+        <template v-slot:title>
+          <div class="headline pa-3 font-weight-light">Title with custom format outside card</div>
+        </template>
+        <v-card-text>Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
+      </card-page>
+      <card-page>
+        <template v-slot:title>
+          <div class="headline pa-3 font-weight-light">Title with custom format inside card</div>
+        </template>
+        <v-card-text>Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
+      </card-page>
+      <card-container title="Title of a fillable card (#Deprecated)">
         <v-card-text>Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
       </card-container>
     </v-content>

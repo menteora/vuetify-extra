@@ -1,6 +1,6 @@
 {
   "name": "@menteora/vuetify-extra",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "scripts": {
     "serve": "vue-cli-service serve ./dev/main.js",
     "build:demo": "vue-cli-service build --dest demo ./dev/main.js",
