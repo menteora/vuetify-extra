@@ -2,7 +2,7 @@
   <div>
     <v-navigation-drawer app fixed temporary clipped v-model="drawer">
       <v-list>
-        <v-list-item v-for="(item, i) in menuItems" :key="i" v-bind="{routerProps:item.to}" exact>
+        <v-list-item v-for="(item, i) in menuItems" :key="i" v-bind="routerProps(item.to)" exact>
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>

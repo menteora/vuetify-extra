@@ -19,13 +19,21 @@
       <v-container>
         <v-card outlined tile>
           <v-card-title class="font-weight-light">Test App Message Snackbar</v-card-title>
-          <v-card-actions>
+          <v-card-text>
             <v-text-field v-model="textMessage" class="mt-3 pa-6" outlined></v-text-field>
+            <v-radio-group v-model="snackbarType" :mandatory="false">
+              <v-radio label="Error" value="error"></v-radio>
+              <v-radio label="Info" value="info"></v-radio>
+              <v-radio label="Warning" value="warning"></v-radio>
+              <v-radio label="Default" value="empty"></v-radio>
+            </v-radio-group>
+          </v-card-text>
+          <v-card-actions>
             <v-btn text @click="$appMessage.show(textMessage)">Popup Message</v-btn>
           </v-card-actions>
         </v-card>
       </v-container>
-      <app-snackbar />
+      <app-snackbar :type="snackbarType" />
       <card-page title-outside title="Title of a card page">
         <v-card-text>Card with title outside card</v-card-text>
       </card-page>
@@ -61,9 +69,10 @@ export default {
     jsonEmitted: null,
     mItems: [],
     textMessage: 'Hello World!',
+    snackbarType: null,
     menuItems: [
-      { title: 'Home', icon: 'mdi-home', to: '/' },
-      { title: 'Fake', icon: 'mdi-bug', to: '/fake-url' }
+      { title: 'Home', icon: 'mdi-home', to: '/vuetify-extra/' },
+      { title: 'Fake', icon: 'mdi-bug', to: '/vuetify-extra/fake-url' }
     ]
   }),
   methods: {
