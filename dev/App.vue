@@ -33,25 +33,32 @@
           </v-card-actions>
         </v-card>
       </v-container>
-      <app-snackbar :type="snackbarType" />
-      <card-page title-outside title="Title of a card page">
-        <v-card-text>Card with title outside card</v-card-text>
+      <app-snackbar />
+      <card-page simple-title>
+        <template v-slot:outside>Simple title outside card not working</template>
+        <template v-slot:inside>Simple title inside card work</template>
+        <v-card-text>Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
       </card-page>
-      <card-page title="Title of a card page">
-        <v-card-text>Card with title inside card</v-card-text>
-      </card-page>
-      <card-page title-outside>
-        <v-card-text>Card without title</v-card-text>
-      </card-page>
-      <card-page title-outside>
-        <template v-slot:title>
-          <div class="headline pa-3 font-weight-light">Title with custom format outside card</div>
-        </template>
+      <card-page simple-title title-position="outside">
+        <template v-slot:outside>Simple title outside card work</template>
+        <template v-slot:inside>Simple title inside card not work</template>
         <v-card-text>Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
       </card-page>
       <card-page>
-        <template v-slot:title>
-          <div class="headline pa-3 font-weight-light">Title with custom format inside card</div>
+        <template v-slot:outside>
+          <h2>Custom title outside card not working</h2>
+        </template>
+        <template v-slot:inside>
+          <h2>Custom title inside card work</h2>
+        </template>
+        <v-card-text>Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
+      </card-page>
+      <card-page title-position="outside">
+        <template v-slot:outside>
+          <h2>Custom title outside card work</h2>
+        </template>
+        <template v-slot:inside>
+          <h2>Custom title inside card not work</h2>
         </template>
         <v-card-text>Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
       </card-page>

@@ -2,37 +2,42 @@
   <v-container>
     <v-layout align-center justify-center>
       <v-flex xs12 sm12 md12 lg9 xl8>
-        <div v-if="title">
-          <div v-if="titleOutside" class="headline pa-3 font-weight-light">{{title}}</div>
-        </div>
-        <div v-else>
-          <slot v-if="titleOutside" name="title"></slot>
-        </div>
-        <v-card class="mx-auto pa-xs-auto pa-sm-5 pa-md-8" :elevation="1">
-          <div v-if="title">
-            <div v-if="!titleOutside">
-              <v-card-title class="font-weight-light">{{ title }}</v-card-title>
-              <v-divider></v-divider>
-            </div>
-          </div>
-          <div v-else>
-            <slot v-if="!titleOutside" name="title"></slot>
-          </div>
+        <component v-bind:is="type">
+          <template v-slot:[titlePosition]><slot :name="titlePosition"></slot></template>
           <slot></slot>
-        </v-card>
+        </component>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import EmptyFormat from './CardPage/EmptyFormat'
+import SimpleTitle from './CardPage/SimpleTitle'
+
 export default {
   props: {
-    title: {
-      type: String
+    titlePosition: {
+      type: String,
+      default: 'inside'
     },
-    titleOutside: {
-      type: Boolean
+    simpleTitle: {
+      type: Boolean,
+      default: false
+    }
+  },
+  components: {
+    EmptyFormat,
+    SimpleTitle
+  },
+  data () {
+    return {
+      drawer: false
+    }
+  },
+  computed: {
+    type: function () {
+      return this.simpleTitle ? 'simple-title' : 'empty-format'
     }
   }
 }
