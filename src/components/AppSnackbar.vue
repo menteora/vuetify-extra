@@ -8,38 +8,30 @@
 
 <script>
 import Plugin from '../plugin.js'
-import info from './AppSnackbar/info.vue'
-import error from './AppSnackbar/error.vue'
-import warning from './AppSnackbar/warning.vue'
-import empty from './AppSnackbar/empty.vue'
+import Info from './AppSnackbar/Info.vue'
+import Error from './AppSnackbar/Error.vue'
+import Warning from './AppSnackbar/Warning.vue'
+import Empty from './AppSnackbar/Empty.vue'
 
 export default {
   components: {
-    info,
-    error,
-    warning,
-    empty
-  },
-  props: {
-    type: {
-      type: String,
-      default: 'empty',
-      validator: function (value) {
-        // The value must match one of these strings
-        return ['info', 'warning', 'error', 'empty'].indexOf(value) !== -1
-      }
-    }
+    Info,
+    Error,
+    Warning,
+    Empty
   },
   data () {
     return {
       snackbar: false,
-      message: ''
+      message: '',
+      type: 'empty'
     }
   },
   methods: {
-    show (message) {
+    show (params) {
       this.snackbar = true
-      this.message = message
+      this.message = params.message
+      this.type = params.type ? params.type : this.type
     }
   },
   beforeMount () {

@@ -29,7 +29,7 @@
             </v-radio-group>
           </v-card-text>
           <v-card-actions>
-            <v-btn text @click="$appMessage.show(textMessage)">Popup Message</v-btn>
+            <v-btn text @click="$appMessage.show({message:textMessage, type:snackbarType})">Popup Message</v-btn>
           </v-card-actions>
         </v-card>
       </v-container>
