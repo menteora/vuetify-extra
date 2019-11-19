@@ -62,9 +62,6 @@
         </template>
         <v-card-text>Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
       </card-page>
-      <card-container title="Title of a fillable card (#Deprecated)">
-        <v-card-text>Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
-      </card-container>
     </v-content>
   </v-app>
 </template>
