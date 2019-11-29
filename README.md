@@ -6,7 +6,7 @@ Demo here: https://menteora.github.io/vuetify-extra/
 
 ## Project setup
 ```
-npm install
+npm install @menteora/vuetify-extra
 ```
 
 ### Compiles and hot-reloads for development
