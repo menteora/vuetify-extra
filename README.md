@@ -52,6 +52,7 @@ export default new Vuetify({
 ```javascript
 import Vue from 'vue'
 import VuetifyExtra from '@menteora/vuetify-extra'
+import '@menteora/vuetify-extra/dist/menteora.css'
 
 Vue.use(VuetifyExtra)
 ```
