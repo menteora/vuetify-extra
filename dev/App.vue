@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-content>
+    <v-main>
       <app-bar :menu-items="mItems" />
       <v-container>
         <v-card outlined tile>
@@ -62,7 +62,7 @@
         </template>
         <v-card-text>Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
       </card-page>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 

@@ -3,7 +3,9 @@
     <v-layout align-center justify-center>
       <v-flex xs12 sm12 md12 lg9 xl8>
         <component v-bind:is="type">
-          <template v-slot:[titlePosition]><slot :name="titlePosition"></slot></template>
+          <template v-slot:[titlePosition]>
+            <slot :name="titlePosition"></slot>
+          </template>
           <slot></slot>
         </component>
       </v-flex>
