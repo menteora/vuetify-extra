@@ -76,3 +76,22 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## Update workflow
+
+1. Update & commit code
+
+### Github pages updates
+2. Update demo `deploy:demo`
+3. Test demo
+
+### Github updates
+4. Update release inside package.json
+5. Tag commit `git tag v0.3.1`
+6. Push Tags `git push origin --tags`
+
+### Npm updates
+7. Update build `npm run build`
+8. Login on npm `npm login`
+8. Update package on npm `npm publish`
