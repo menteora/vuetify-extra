@@ -11,6 +11,10 @@ cd demo
 
 git init
 git add -A
+
+git config --global user.name "menteora"
+git config --global user.email "menteora@gmail.com"
+
 git commit -m 'deploy'
 
 git push -f https://github.com/menteora/vuetify-extra.git master:gh-pages
