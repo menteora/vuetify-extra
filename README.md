@@ -83,7 +83,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 1. Update & commit code
 
 ### Github pages updates
-2. Update demo `deploy:demo`
+2. Update demo `npm run deploy:demo`
 3. Test demo
 
 ### Github updates

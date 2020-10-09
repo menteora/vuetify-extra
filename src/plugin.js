@@ -25,7 +25,7 @@ function install (Vue) {
   this.EventBus = new Vue()
   Vue.prototype.$appMessage = {
     show (params) {
-      plugin.EventBus.$emit('AppMessageShow', params)
+      plugin.EventBus.$emit('app-message-show', params)
     }
   }
 }

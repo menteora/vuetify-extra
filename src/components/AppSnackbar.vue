@@ -35,7 +35,7 @@ export default {
     }
   },
   beforeMount () {
-    Plugin.EventBus.$on('AppMessageShow', params => {
+    Plugin.EventBus.$on('app-message-show', params => {
       this.show(params)
     })
   }
