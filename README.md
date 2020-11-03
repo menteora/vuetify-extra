@@ -3,7 +3,7 @@ Vue library with common used components based on Vuetify.
 
 Demo here: https://menteora.github.io/vuetify-extra/
 
-2020/11/03 - [**NEW!** Docker Itegration](#Docker-Integration)
+2020/11/03 - [**NEW!** Docker Integration](#Docker-Integration)
 
 ## Project setup
 ### Install Library
