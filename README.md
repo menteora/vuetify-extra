@@ -3,6 +3,7 @@ Vue library with common used components based on Vuetify.
 
 Demo here: https://menteora.github.io/vuetify-extra/
 
+2020/11/03 - [**NEW!** Docker Itegration](#Docker-Integration)
 
 ## Project setup
 ### Install Library
@@ -56,6 +57,14 @@ import '@menteora/vuetify-extra/dist/menteora.css'
 
 Vue.use(VuetifyExtra)
 ```
+
+## Docker Integration
+- Install Docker (refer to official Guide)
+- Install "Docker" Extension on VSCode
+- Open Folder with VSCode
+- Answer "Reopen in Container" 
+
+![reopen inside docker button](docs/reopen-inside-docker.png)
 
 ## Project setup
 
