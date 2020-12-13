@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import Plugin from '../plugin.js'
-import Info from './AppSnackbar/Info.vue'
-import Error from './AppSnackbar/Error.vue'
-import Warning from './AppSnackbar/Warning.vue'
-import Empty from './AppSnackbar/Empty.vue'
+import Plugin from '@/plugin.js'
+import Info from '@/components/AppSnackbar/Info.vue'
+import Error from '@/components/AppSnackbar/Error.vue'
+import Warning from '@/components/AppSnackbar/Warning.vue'
+import Empty from '@/components/AppSnackbar/Empty.vue'
 
 export default {
   components: {

@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import EmptyFormat from './CardPage/EmptyFormat'
-import SimpleTitle from './CardPage/SimpleTitle'
+import EmptyFormat from '@/components/CardPage/EmptyFormat'
+import SimpleTitle from '@/components/CardPage/SimpleTitle'
 
 export default {
   props: {
