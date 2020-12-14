@@ -1,6 +1,6 @@
 {
   "name": "@menteora/vuetify-extra",
-  "version": "0.3.2",
+  "version": "1.0.0-beta.0",
   "license": "MIT",
   "main": "dist/vuetify-extra.ssr.js",
   "browser": "dist/vuetify-extra.esm.js",
@@ -9,17 +9,17 @@
   "scripts": {
     "serve": "vue-cli-service serve ./dev/main.js",
     "build:demo": "vue-cli-service build --dest demo ./dev/main.js",
-    "build:local": "vue-cli-service build --target lib --name menteora src/plugin.js && npm pack",
     "lint": "vue-cli-service lint --fix && vue-cli-service lint dev --fix",
     "deploy:demo": "vue-cli-service build --dest demo ./dev/main.js && ./deploy.demo.sh",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "build:local": "cross-env NODE_ENV=production rollup --config build/rollup.config.js && npm pack"
   },
   "files": [
     "dist",
-    "src/**/*.vue"
+    "src/**/*.*"
   ],
   "repository": {
     "type": "git",

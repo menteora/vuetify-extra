@@ -7,11 +7,12 @@
 </template>
 
 <script>
-import Plugin from '@/plugin.js'
+// import Plugin from '@/plugin.js'
 import Info from '@/components/AppSnackbar/Info.vue'
 import Error from '@/components/AppSnackbar/Error.vue'
 import Warning from '@/components/AppSnackbar/Warning.vue'
 import Empty from '@/components/AppSnackbar/Empty.vue'
+import { EventBus } from '@/components/EventBus/index.js'
 
 export default {
   components: {
@@ -35,7 +36,7 @@ export default {
     }
   },
   beforeMount () {
-    Plugin.EventBus.$on('app-message-show', params => {
+    EventBus.$on('app-message-show', params => {
       this.show(params)
     })
   }

@@ -51,7 +51,7 @@
         <template v-slot:inside>
           <h2>Custom title inside card work</h2>
         </template>
-        <v-card-text>Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
+        <v-card-text>1Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.</v-card-text>
       </card-page>
       <card-page title-position="outside">
         <template v-slot:outside>
