@@ -3,6 +3,7 @@ Vue library with common used components based on Vuetify.
 
 Demo here: https://menteora.github.io/vuetify-extra/
 
+2020/12/18 - v1.0.0-beta.0 - reduced library size from 300kb to 9kb (removed any duplicated vuetify code)
 2020/11/03 - [**NEW!** Docker Integration](#Docker-Integration)
 
 ## Project setup
@@ -53,7 +54,6 @@ export default new Vuetify({
 ```javascript
 import Vue from 'vue'
 import VuetifyExtra from '@menteora/vuetify-extra'
-import '@menteora/vuetify-extra/dist/menteora.css'
 
 Vue.use(VuetifyExtra)
 ```
