@@ -1,3 +1,11 @@
+# IMPORTANT!
+
+There's a **BUG** in **v1.0.0-beta.0**, use previous version:
+
+```
+npm install  @menteora/vuetify-extra@0.3.2
+```
+
 # vuetify-extra
 Vue library with common used components based on Vuetify.
 
